@@ -1,0 +1,12 @@
+.BRI {
+  padding-left: 23vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  filter: invert(100%);
+  width: 480px;
+  height: auto;
+  transform: scale(1.1);
+}
+.Resaltar {
+  color: aqua;
+}

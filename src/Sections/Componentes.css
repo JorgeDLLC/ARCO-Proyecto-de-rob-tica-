@@ -1,0 +1,4 @@
+.SensorColor {
+  background-color: transparent;
+  filter: brightness(1) invert(0);
+}

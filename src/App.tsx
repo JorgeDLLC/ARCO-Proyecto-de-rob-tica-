@@ -14,9 +14,8 @@ import DiseñoCinematico from "./Sections/Diseño_cinematico";
 // Importa las otras páginas según sea necesario.
 
 const App: React.FC = () => {
-  const [titles, setTitles] = React.useState<{ id: string; text: string }[]>(
-    []
-  );
+// @ts-ignore -- pendiente implementar uso de setTitles
+const [titles, setTitles] = useState<string[]>([]);
   return (
     <Router>
       <div className="app">

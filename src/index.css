@@ -13,19 +13,22 @@
 }
 
 body {
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-direction: row; /* Alinea sidebar y contenido */
+  flex-direction: row;
   min-height: 100vh;
 }
+
 .content {
-  margin-left: 25px; /* Igual al ancho de la barra lateral */
+  width: calc(100%-350px);
+  margin-left: auto;
   margin-right: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
+  padding: 20px;
   background-color: #232831; /* Fondo de la página */
 }
 h1 {
@@ -48,9 +51,8 @@ p {
   font-size: 1.2em;
   text-align: left;
 }
-img {
-  display: flex;
-  justify-content: center;
+.Resaltar {
+  color: aqua;
 }
 @media (max-width: 1080px) {
   .content {

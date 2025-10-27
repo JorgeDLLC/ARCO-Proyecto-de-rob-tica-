@@ -1,23 +1,21 @@
 .right-sidebar {
-  display: flex;
   position: fixed;
   right: 0;
   width: 350px;
   height: 100vh;
-  color: rgb(239, 234, 234);
+  color: white;
+  display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  z-index: 1000;
-}
-.boxr {
-  list-style: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.right-sidebar {
+  z-index: 10000;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.boxr {
+  display: flex;
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .right-sidebar li {
@@ -36,8 +34,8 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1400px) {
   .right-sidebar {
-    display: none; /* Oculta el sidebar */
+    display: none;
   }
 }

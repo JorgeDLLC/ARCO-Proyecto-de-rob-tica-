@@ -1,0 +1,39 @@
+name: CI - React Vite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Probar (si existe script test)
+        run: npm test --if-present -- --ci
+
+      - name: Construir
+        run: npm run build
+
+      - name: Guardar artefacto de build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            dist
+            build
+          if-no-files-found: warn
